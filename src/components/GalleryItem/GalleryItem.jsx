@@ -1,8 +1,11 @@
-function GalleryItem({ gallery }) {
+function GalleryItem({gallery}) {
   return (
     <>
-      <li>{gallery.description}</li>
-      <img src={gallery.url} width="100"></img>
+	
+  The {gallery.description}
+      {/* <li>{gallery.description}</li>
+      <img src={gallery.url} width="100"></img> */}
+	
     </>
   );
 }

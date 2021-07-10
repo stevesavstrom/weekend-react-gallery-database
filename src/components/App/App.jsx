@@ -13,20 +13,13 @@ function App() {
 
   // Function to get the creatures from the server/database
   const fetchGallery = () => {
-    axios({
-      method: "GET",
-      url: "/",
-    })
+    axios.get('/gallery')
       .then((response) => {
-        console.log("Entire response:", response);
-        // The actual array comes from the data attribute on the response
-        console.log("Just the data:", response.data);
-
-        // Set data into component state
         setGalleryList(response.data);
       })
-      .catch(function (error) {
-        console.log("Error on get:", error);
+      .catch((error) => {
+        alert('Error Getting Gallery!');
+        console.log(error);
       });
   };
 
@@ -37,7 +30,7 @@ function App() {
       </header>
       <p>Gallery goes here</p>
       <img src="images/goat_small.jpg" />
-      <GalleryList list={galleryList} />
+      <GalleryList galleryList={galleryList} />
     </div>
   );
 }
