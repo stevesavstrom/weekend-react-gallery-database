@@ -2,7 +2,7 @@ import "./GalleryItem.css";
 import { useState } from "react";
 
 function GalleryItem({ gallery, likePhoto }) {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   const [image, setImage] = useState(true);
 
   // const increaseLikes = () => {
@@ -28,8 +28,9 @@ function GalleryItem({ gallery, likePhoto }) {
             <div class="centered">{!image && <p>{gallery.description}</p>}</div>
           </div>
         </div>
-        <button id="likeButton" onClick={() => {handleLike(gallery.id)}}> Likes {gallery.likes}</button>
-        {/* <div>Likes: {count}</div> */}
+        <button id="likeButton" onClick={() => {handleLike(gallery.id)}}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Eo_circle_red_white_heart.svg/1024px-Eo_circle_red_white_heart.svg.png" width="20px"></img></button>
+        <p><strong>{gallery.likes}</strong> people have liked this photo.</p>
+        
       </section>
     </>
   );

@@ -1,5 +1,5 @@
 #item {
-  border: 1.5px solid black;
+  border: none;
   border-radius: 10px;
   align-items: center;
   width: 20%;
@@ -35,5 +35,16 @@ img {
 }
 
 #likeButton {
-  margin-top: 5%;
+  margin-top: 1%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  font-size: 14px;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+p {
+  font-size: 12px;
 }
