@@ -23,13 +23,23 @@ function App() {
       });
   };
 
+  const likePhoto = (likeId) => {
+    axios.put(`gallery/like/${likeId}`)
+    .then(response => {
+      console.log('PUT connected on App.jsx');
+      fetchGallery();
+    }) .catch(error => {
+      console.log('PUT error liking photo');
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       <section id="galleryLayout">
-      <GalleryList galleryList={galleryList} />
+      <GalleryList galleryList={galleryList} likePhoto={likePhoto} />
       </section>
     </div>
   );

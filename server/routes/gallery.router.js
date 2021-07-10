@@ -3,24 +3,42 @@ const router = express.Router();
 // Added pool for database
 const pool = require('../modules/pool');
 
+// const galleryItems 
+
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
 // PUT Route
 router.put('/like/:id', (req, res) => {
-    console.log(req.params);
-    const galleryId = req.params.id;
-    for(const galleryItem of galleryItems) {
-        if(galleryItem.id == galleryId) {
-            galleryItem.likes += 1;
-        }
-    }
+    console.log('Testing like on server', req.params);
+    const likeId = req.params.id;
+    const updateLike = 
+    `UPDATE gallery 
+    SET "likes"= likes +1
+    WHERE "id" =$1`;
+    pool.query(updateLike, [likeId])
+        .then((result) => {
+            console.log('Updated task with PUT', result);
+            res.send(result.rows);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${updateLike}`, error);
+            res.sendStatus(500);
+        });
+
+
+    // const galleryId = req.params.id;
+    // for(const galleryItem of galleryItems) {
+    //     if(galleryItem.id == galleryId) {
+    //         galleryItem.likes += 1;
+    //     }
+    
     res.sendStatus(200);
 }); // END PUT Route
 
 // GET Route
 router.get('/', (req, res) => {
     // Get all of the treats from the database
-    const sqlText = `SELECT * FROM gallery`;
+    const sqlText = `SELECT * FROM gallery ORDER BY id ASC`;
     pool.query(sqlText)
         .then((result) => {
             res.send(result.rows);

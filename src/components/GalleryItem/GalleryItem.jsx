@@ -1,13 +1,18 @@
 import "./GalleryItem.css";
 import { useState } from "react";
 
-function GalleryItem({ gallery }) {
+function GalleryItem({ gallery, likePhoto }) {
   const [count, setCount] = useState(0);
   const [image, setImage] = useState(true);
 
-  const increaseLikes = () => {
-    setCount(count + 1);
-  };
+  // const increaseLikes = () => {
+  //   setCount(count + 1);
+  // };
+
+  function handleLike(likeId) {
+    console.log('handleLike function');
+    likePhoto(likeId);
+  }
 
   const toggleText = () => {
     setImage(!image);
@@ -17,12 +22,13 @@ function GalleryItem({ gallery }) {
     <>
       <section id="item">
         <div class="container">
-          <button id="imageButton" onClick={toggleText}>
+          <div id="imageButton" onClick={toggleText}>
+          {/* {image &&} */}
             <img src={gallery.url} width="100%"></img>
             <div class="centered">{!image && <p>{gallery.description}</p>}</div>
-          </button>
+          </div>
         </div>
-        <button id="likeButton" onClick={increaseLikes}>❤️ {count}</button>
+        <button id="likeButton" onClick={() => {handleLike(gallery.id)}}> Likes {gallery.likes}</button>
         {/* <div>Likes: {count}</div> */}
       </section>
     </>
