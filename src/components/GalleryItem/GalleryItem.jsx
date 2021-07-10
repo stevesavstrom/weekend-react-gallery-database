@@ -2,8 +2,9 @@ function GalleryItem({gallery}) {
   return (
     <>
 	
-      <li>{gallery.description}</li>
-      <img src={gallery.url} width="100"></img>
+      
+      <img src={gallery.url} width="150"></img>
+      <p>{gallery.description}</p>
 	
     </>
   );
