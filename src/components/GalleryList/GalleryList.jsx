@@ -1,14 +1,14 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
+import "./GalleryList.css";
 
 function GalleryList( props ) {
   return (
     <>
-      <h2>My Awesome Gallery</h2>
-        <ul>
+        <section>
           {props.galleryList.map(gallery => 
             <GalleryItem key={gallery.id} gallery={gallery} />
           )}
-        </ul>
+        </section>
     </>
   )
 }

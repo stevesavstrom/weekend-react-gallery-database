@@ -1,0 +1,11 @@
+#item {
+	border: 1.5px solid black;
+	border-radius: 10px;
+	align-items: center;
+	width: 20%;
+	padding: 20px;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+
+}

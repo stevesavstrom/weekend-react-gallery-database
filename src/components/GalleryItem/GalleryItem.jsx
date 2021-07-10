@@ -1,11 +1,13 @@
-function GalleryItem({gallery}) {
+import "./GalleryItem.css";
+
+function GalleryItem({ gallery }) {
   return (
     <>
-	
-      
-      <img src={gallery.url} width="150"></img>
-      <p>{gallery.description}</p>
-	
+      <section id="item">
+        <img src={gallery.url} width="150"></img>
+        <p>{gallery.description}</p>
+        <button>Like!</button>
+      </section>
     </>
   );
 }
