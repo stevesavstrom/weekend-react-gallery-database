@@ -18,13 +18,11 @@ function GalleryItem({ gallery }) {
       <section id="item">
         <div class="container">
           <button id="imageButton" onClick={toggleText}>
-            <img src={gallery.url} width="150"></img>
+            <img src={gallery.url} width="100%"></img>
             <div class="centered">{!image && <p>{gallery.description}</p>}</div>
           </button>
         </div>
-
-        <p>{gallery.description}</p>
-        <button onClick={increaseLikes}>❤️ {count}</button>
+        <button id="likeButton" onClick={increaseLikes}>❤️ {count}</button>
         {/* <div>Likes: {count}</div> */}
       </section>
     </>
