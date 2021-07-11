@@ -28,7 +28,7 @@ Full stack photo gallery application that allows users to view and react to phot
 5. Run `npm run client` on another Terminal to view React application.
 
 ## Usage
-Get to know Steve better by viewing and interacting with photos from his life. Learn more about each photo by clicking on the image to toggle on a description. Interact with photos by clicking the "like" button.
+Get to know [Steve](https://www.linkedin.com/in/stevesavstrom/) better by viewing and interacting with photos from his life. Learn more about each photo by clicking on the image to toggle on a description. Interact with photos by clicking the "like" button.
 
 ## Project Requirements
 - [x] Front end experience that allows users to view and interact with photos.
