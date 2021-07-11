@@ -14,7 +14,7 @@ Full stack photo gallery application that allows users to view and react to phot
 ![Screen Shot](/public/images/screenshot.png)
 
 ## Technologies Used and Prerequisites
-- [React] (https://reactjs.org/)
+- [React](https://reactjs.org/)
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
 - [PostgreSQL](https://www.postgresql.org/)

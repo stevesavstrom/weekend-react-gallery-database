@@ -1,11 +1,10 @@
 import "./GalleryItem.css";
 import { useState } from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee, faHeart, faPlus } from "@fortawesome/free-solid-svg-icons";
 
-const element = <FontAwesomeIcon icon={faHeart} />
-
+const element = <FontAwesomeIcon icon={faHeart} />;
 
 function GalleryItem({ gallery, likePhoto }) {
   // const [count, setCount] = useState(0);
@@ -16,7 +15,7 @@ function GalleryItem({ gallery, likePhoto }) {
   // };
 
   function handleLike(likeId) {
-    console.log('handleLike function');
+    console.log("handleLike function");
     likePhoto(likeId);
   }
 
@@ -29,16 +28,25 @@ function GalleryItem({ gallery, likePhoto }) {
       <section id="item">
         <div class="container">
           <div id="imageButton" onClick={toggleText}>
-          {/* {image &&} */}
+            {/* {image &&} */}
             <img src={gallery.url} width="100%"></img>
             <div class="centered">{!image && <p>{gallery.description}</p>}</div>
           </div>
         </div>
 
-        <button id="likeButton" onClick={() => {handleLike(gallery.id)}}><p><span id="heart"><FontAwesomeIcon icon={faHeart} /> </span><strong>{gallery.likes}</strong> people love this.</p></button>
-      
-        
-        
+        <button
+          id="likeButton"
+          onClick={() => {
+            handleLike(gallery.id);
+          }}
+        >
+          <p>
+            <span id="heart">
+              <FontAwesomeIcon icon={faHeart} />{" "}
+            </span>
+            <strong>{gallery.likes}</strong> people love this.
+          </p>
+        </button>
       </section>
     </>
   );
@@ -46,4 +54,6 @@ function GalleryItem({ gallery, likePhoto }) {
 
 export default GalleryItem;
 
-{/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Eo_circle_red_white_heart.svg/1024px-Eo_circle_red_white_heart.svg.png" width="20px"></img> */}
+{
+  /* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Eo_circle_red_white_heart.svg/1024px-Eo_circle_red_white_heart.svg.png" width="20px"></img> */
+}

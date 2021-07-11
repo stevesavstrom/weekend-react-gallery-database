@@ -16,7 +16,7 @@
 }
 
 img {
-	filter: brightness(90%);
+  filter: brightness(90%);
   border-radius: 0px;
 }
 
@@ -39,7 +39,7 @@ img {
 
 #likeButton {
   margin-top: 1%;
-  border: 2px solid #E36035;
+  border: 2px solid #e36035;
   border-radius: 8px;
   font-size: 16px;
   padding: 2px;
@@ -54,10 +54,10 @@ img {
 }
 
 #heart {
-  color: #E36035;
+  color: #e36035;
 }
 
-  /* border-radius: 12px;
+/* border-radius: 12px;
 
 
 .button {
@@ -71,4 +71,4 @@ p {
 }
 
   /* border: 1px solid gray; */
-  /* box-shadow: 0px 3px 15px rgba(0,0,0,0.2); */
+/* box-shadow: 0px 3px 15px rgba(0,0,0,0.2); */
