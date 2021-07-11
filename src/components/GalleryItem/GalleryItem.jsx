@@ -1,6 +1,12 @@
 import "./GalleryItem.css";
 import { useState } from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faHeart, faPlus } from '@fortawesome/free-solid-svg-icons'
+
+const element = <FontAwesomeIcon icon={faHeart} />
+
+
 function GalleryItem({ gallery, likePhoto }) {
   // const [count, setCount] = useState(0);
   const [image, setImage] = useState(true);
@@ -28,8 +34,10 @@ function GalleryItem({ gallery, likePhoto }) {
             <div class="centered">{!image && <p>{gallery.description}</p>}</div>
           </div>
         </div>
-        <button id="likeButton" onClick={() => {handleLike(gallery.id)}}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Eo_circle_red_white_heart.svg/1024px-Eo_circle_red_white_heart.svg.png" width="20px"></img></button>
-        <p><strong>{gallery.likes}</strong> people have liked this photo.</p>
+
+        <button id="likeButton" onClick={() => {handleLike(gallery.id)}}><p><span id="heart"><FontAwesomeIcon icon={faHeart} /> </span><strong>{gallery.likes}</strong> people have liked this photo.</p></button>
+      
+        
         
       </section>
     </>
@@ -37,3 +45,5 @@ function GalleryItem({ gallery, likePhoto }) {
 }
 
 export default GalleryItem;
+
+{/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Eo_circle_red_white_heart.svg/1024px-Eo_circle_red_white_heart.svg.png" width="20px"></img> */}
