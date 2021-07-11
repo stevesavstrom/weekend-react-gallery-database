@@ -36,7 +36,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Gallery of My Life</h1>
+        <img id="banner" src="/images/banner.png"></img>
+        {/* <h1 className="App-title">Steve Savstrom</h1> */}
       </header>
       <section id="galleryLayout">
       <GalleryList galleryList={galleryList} likePhoto={likePhoto} />
