@@ -1,4 +1,4 @@
-# Weekend Challenge: React Gallaery
+# Weekend Challenge: React Gallery
 
 ## Description
 Full stack photo gallery application that allows users to view and react to photos. This project utilizes React, Node.js, Express, PostgreSQL, HTML, and CSS. This project implements server and client side functionality to create, read, and update items on the server, client, and database. This project was created by [Steve Savstrom](https://www.linkedin.com/in/stevesavstrom/) during Week 10 of the [Full Stack Software Engineering program](https://www.primeacademy.io/courses/engineering#curriculum) at [Prime Digital Academy](https://www.primeacademy.io/).
