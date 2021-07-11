@@ -35,7 +35,7 @@ function GalleryItem({ gallery, likePhoto }) {
           </div>
         </div>
 
-        <button id="likeButton" onClick={() => {handleLike(gallery.id)}}><p><span id="heart"><FontAwesomeIcon icon={faHeart} /> </span><strong>{gallery.likes}</strong> people have liked this photo.</p></button>
+        <button id="likeButton" onClick={() => {handleLike(gallery.id)}}><p><span id="heart"><FontAwesomeIcon icon={faHeart} /> </span><strong>{gallery.likes}</strong> people love this.</p></button>
       
         
         

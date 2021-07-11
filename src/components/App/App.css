@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  background-color: #fff;
 }
 
 .App-header {
-  background-color: #fff;
+  background-color: #E5A52F;
   padding: 0em;
   color: white;
   margin-bottom: 1em;
@@ -16,7 +17,7 @@
 #banner {
   max-width: 100%;
   width: auto;
-  height: auto;
+  height: 200px;
   border-radius: 0;
   box-shadow: none;
 }

@@ -13,34 +13,36 @@ function App() {
 
   // Function to get the creatures from the server/database
   const fetchGallery = () => {
-    axios.get('/gallery')
+    axios
+      .get("/gallery")
       .then((response) => {
         setGalleryList(response.data);
       })
       .catch((error) => {
-        alert('Error Getting Gallery!');
+        alert("Error Getting Gallery!");
         console.log(error);
       });
   };
 
   const likePhoto = (likeId) => {
-    axios.put(`gallery/like/${likeId}`)
-    .then(response => {
-      console.log('PUT connected on App.jsx');
-      fetchGallery();
-    }) .catch(error => {
-      console.log('PUT error liking photo');
-    })
-  }
+    axios
+      .put(`gallery/like/${likeId}`)
+      .then((response) => {
+        console.log("PUT connected on App.jsx");
+        fetchGallery();
+      })
+      .catch((error) => {
+        console.log("PUT error liking photo");
+      });
+  };
 
   return (
     <div className="App">
       <header className="App-header">
         <img id="banner" src="/images/banner.png"></img>
-        {/* <h1 className="App-title">Steve Savstrom</h1> */}
       </header>
       <section id="galleryLayout">
-      <GalleryList galleryList={galleryList} likePhoto={likePhoto} />
+        <GalleryList galleryList={galleryList} likePhoto={likePhoto} />
       </section>
     </div>
   );
