@@ -36,4 +36,17 @@ Get to know Steve better by viewing and interacting with photos from his life. L
 - [x] Create a new component for the `GalleryList` and pass it the gallery data stored in`App` via `props`. `GalleryList` represents the entire gallery of images.
 - [x] Iterate (loop over) the list of gallery data.
 - [x] Make `GalleryItems` component which represents a single image in the gallery with the ability to click the image to toggle between image and description as well a the ability to like an image.
+- [x] Update the `GalleryList` to use this component to display an image.
+- [x] Swap the image with the description on click using conditional rendering.
+- [x] Display the number of likes for each item and include a like button.
+- [x] When the button is clicked, use `Axios` to update (`PUT`)
+ the count `/gallery/like/:id`.
+- [x] Update the gallery each time a like button is clicked.
 
+## Stretch Goals
+- [x] Move the data into a database named `react_gallery.
+- [x] Include a `database.sql` file documenting your database tables.
+- [ ] Add a form (new component) that allows a user to POST a new gallery item. Client side form (use absolute URLs). Server side route for posting an image.
+- [ ] Ability to delete a gallery item.
+- [ ] Add styling with Material-UI.
+- [ ] Implement Uppy for image upload.
