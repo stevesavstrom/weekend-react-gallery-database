@@ -19,5 +19,10 @@ VALUES ('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-d
 ('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo4.png', 'Honeymoon in Banff'),
 ('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo6.png', 'Teaching in Chicago'),
 ('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo8.png', 'Teaching in Minneapolis'),
-('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo3.png', 'Skiing on the North Shore');
-
+('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo3.png', 'Skiing on the North Shore'),
+('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo11.jpg', 'Camping on the North Shore'),
+('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo12.jpg', 'Biking from Minneapolis to Tofte'),
+('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo13.jpg', 'Lake Moraine in Banff'),
+('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo14.jpg', 'Biking in Glacier National Park'),
+('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo15.jpg', 'We bought a house!'),
+('https://raw.githubusercontent.com/stevesavstrom/weekend-react-gallery-database/master/public/images/photo16.jpg', 'North Shore bike trip with Dad');
