@@ -22,8 +22,6 @@ router.put("/like/:id", (req, res) => {
       console.log(`Error making database query ${updateLike}`, error);
       res.sendStatus(500);
     });
-
-  res.sendStatus(200);
 }); // END PUT Route
 
 // GET Route for retrieving URLs, Descriptions, and Likes from database
