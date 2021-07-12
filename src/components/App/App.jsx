@@ -4,6 +4,7 @@ import "./App.css";
 import GalleryList from "../GalleryList/GalleryList.jsx";
 
 function App() {
+  // galleryList declared as empty array
   const [galleryList, setGalleryList] = useState([]);
 
   useEffect(() => {
@@ -11,7 +12,7 @@ function App() {
     fetchGallery();
   }, []);
 
-  // Function to get the creatures from the server/database
+  // Axios to GET the gallery items from the server/database
   const fetchGallery = () => {
     axios
       .get("/gallery")
@@ -24,6 +25,7 @@ function App() {
       });
   };
 
+  // Axios PUT to update likes in the database
   const likePhoto = (likeId) => {
     axios
       .put(`gallery/like/${likeId}`)
@@ -38,9 +40,11 @@ function App() {
 
   return (
     <div className="App">
+      {/* Banner header for top of DOM */}
       <header className="App-header">
         <img id="banner" src="/images/banner.png"></img>
       </header>
+      {/* All other content/logic contained within GalleryList component */}
       <section id="galleryLayout">
         <GalleryList galleryList={galleryList} likePhoto={likePhoto} />
       </section>
@@ -48,4 +52,5 @@ function App() {
   );
 }
 
+// Exports to index.js
 export default App;
