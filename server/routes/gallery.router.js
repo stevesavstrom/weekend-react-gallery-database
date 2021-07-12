@@ -5,7 +5,7 @@ const pool = require("../modules/pool");
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
-// PUT Route
+// PUT Route for updating likes on database
 router.put("/like/:id", (req, res) => {
   console.log("Testing like on server", req.params);
   const likeId = req.params.id;
@@ -26,7 +26,7 @@ router.put("/like/:id", (req, res) => {
   res.sendStatus(200);
 }); // END PUT Route
 
-// GET Route
+// GET Route for retrieving URLs, Descriptions, and Likes from database
 router.get("/", (req, res) => {
   // Get all of the treats from the database
   const sqlText = `SELECT * FROM gallery ORDER BY id ASC`;

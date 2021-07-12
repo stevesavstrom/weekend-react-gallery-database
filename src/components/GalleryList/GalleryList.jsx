@@ -1,19 +1,23 @@
-import GalleryItem from '../GalleryItem/GalleryItem';
+import GalleryItem from "../GalleryItem/GalleryItem";
 import "./GalleryList.css";
 
-function GalleryList( props ) {
+// GalleryList represents the entire gallery of GalleryItems
+// GalleryList component iterates over galleryList array using map object
+function GalleryList(props) {
   return (
     <>
-        <section>
-          {props.galleryList.map(gallery => 
-            <GalleryItem 
-            key={gallery.id} 
+      <section>
+        {props.galleryList.map((gallery) => (
+          <GalleryItem
+            key={gallery.id}
             likePhoto={props.likePhoto}
-            gallery={gallery} />
-          )}
-        </section>
+            gallery={gallery}
+          />
+        ))}
+      </section>
     </>
-  )
+  );
 }
 
+// Exports to App.jsx component
 export default GalleryList;

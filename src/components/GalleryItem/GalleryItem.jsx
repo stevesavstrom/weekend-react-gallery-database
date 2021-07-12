@@ -1,28 +1,28 @@
 import "./GalleryItem.css";
 import { useState } from "react";
 
+// Font Awesome for heart icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faHeart, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const element = <FontAwesomeIcon icon={faHeart} />;
 
+// GaleryItem represents the one item in the photo gallery.
+// Includes photo, like button, and description
 function GalleryItem({ gallery, likePhoto }) {
-  // const [count, setCount] = useState(0);
   const [image, setImage] = useState(true);
-
-  // const increaseLikes = () => {
-  //   setCount(count + 1);
-  // };
 
   function handleLike(likeId) {
     console.log("handleLike function");
     likePhoto(likeId);
   }
 
+  // Conditional logic to toggle description on/off
   const toggleText = () => {
     setImage(!image);
   };
 
+  // HTML section represents one gallery item (photo, like button, description)
   return (
     <>
       <section id="item">
@@ -52,8 +52,5 @@ function GalleryItem({ gallery, likePhoto }) {
   );
 }
 
+// Exports to to GalleryList component
 export default GalleryItem;
-
-{
-  /* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Eo_circle_red_white_heart.svg/1024px-Eo_circle_red_white_heart.svg.png" width="20px"></img> */
-}
